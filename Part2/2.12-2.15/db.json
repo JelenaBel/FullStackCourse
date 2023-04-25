@@ -1,0 +1,19 @@
+{
+  "persons": [
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": 4
+    },
+    {
+      "name": "Olena",
+      "phone": "3456",
+      "id": 5
+    },
+    {
+      "name": "Andrei",
+      "phone": "12-3456789",
+      "id": 6
+    }
+  ]
+}
