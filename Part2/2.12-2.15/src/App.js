@@ -85,6 +85,7 @@ const App = () => {
   const changePerson = { ...updatedPerson, phone: newPhone }
   personsService
   .updatePerson(updatedPerson.id, changePerson)
+  setPersons(persons.map(person => person.name !== newName ? person : changePerson))
   } 
 
   
