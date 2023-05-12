@@ -6,7 +6,7 @@ const getCountries = () => {
     return request.then(response => response.data)
 }
 const getWeatherForecast = (latitude, longitude) => {
-    const api_key = process.env.REACT_APP_API_KEY    
+    const api_key = process.env.REACT_APP_API_KEY   
     const lon = longitude
     const lat= latitude
     console.log ('latitude to axios', lat)
