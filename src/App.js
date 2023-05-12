@@ -69,7 +69,7 @@ const handleShowCountry = (nameCommon) =>{
 const countriesToShow = showAll
   ? countries
   : countries.filter(country => country.name.common.toLowerCase().includes(searched.toLowerCase()))
-  console.log('length of chosen countries array', countriesToShow.length)
+ 
 
 
   
