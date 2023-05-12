@@ -15,6 +15,7 @@ const CountryDetailed = (props)=> {
        
         return (
             <div>
+                <button type='submit' onClick = {props.handleFullList}>Back to countries list</button>
             <p>{props.country.name.common}</p>
             <p>Capital: {props.country.capital}</p>
             <p> Area: {props.country.area} km</p>

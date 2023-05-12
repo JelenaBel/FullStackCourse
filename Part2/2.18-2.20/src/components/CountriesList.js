@@ -13,7 +13,7 @@ const CountriesList = (props)=> {
     <ul>
     
     <ul key= {index} style = {{listStyleType: 'circle'}}>  
-    <CountryDetailed country= {country} weather = {props.weather}></CountryDetailed> 
+    <CountryDetailed country= {country} weather = {props.weather} handleFullList= {props.handleFullList}></CountryDetailed> 
     </ul>
     
     
