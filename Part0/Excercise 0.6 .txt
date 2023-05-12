@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    browser->>server: content-length: 26, content-type: application/json; charset=utf-8
+    {content: "Hi", date: "2023-04-05T11:40:48.098Z"}
+    content: "Hi"
+    date: "2023-04-05T11:40:48.098Z"
+
+    activate server
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+
+    server --> brother: sentToServer: @spa.js:43 , function onreadystatechange() called
+                        form onSubmit: @spa.js:59 (function, which proceessed adda info)
+                       
+
+     
+    server->> browther console:   {"message":"note created"}  
+                       function redrawNotes() called
+    
+   
+    deactivate server
+    
+    

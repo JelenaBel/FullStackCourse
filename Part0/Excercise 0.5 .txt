@@ -1,0 +1,43 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    activate server
+    server-->>browser: HTML document
+    deactivate server
+
+    browser ->> server: chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js
+    Content-Type: text/javascript
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: the css file
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    activate server
+    server-->>browser: the JavaScript file
+    deactivate server
+
+    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: [{content: "", date: "2023-04-05T11:21:18.542Z"}, {content: "", date: "2023-04-05T11:21:18.726Z"},…]
+0
+: 
+{content: "", date: "2023-04-05T11:21:18.542Z"}
+1
+: 
+{content: "", date: "2023-04-05T11:21:18.726Z"}
+2
+: 
+{content: "", date: "2023-04-05T11:21:19.358Z"}
+3
+: 
+{content: "", date: "2023-04-05T11:21:19.534Z"} ......]
+
+    deactivate server
+
+    Note right of browser: The browser executes the callback function that renders the notes (line 31 in spa.js)
