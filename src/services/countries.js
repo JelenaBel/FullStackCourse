@@ -9,6 +9,8 @@ const getWeatherForecast = (latitude, longitude) => {
     const api_key = process.env.REACT_APP_API_KEY
     const lon = longitude
     const lat= latitude
+    console.log ('latitude to axios', lat)
+    console.log ('Longitude to axios', lon)
     const part = ['minutely','hourly','daily','alerts']
     
     const request = axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${api_key}`)
