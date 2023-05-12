@@ -13,7 +13,7 @@ const getWeatherForecast = (latitude, longitude) => {
     console.log ('Longitude to axios', lon)
     const part = ['minutely','hourly','daily','alerts']
     
-    const request = axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=8ee70c6c502e1ac9c42c1f4203e3dfed`)
+    const request = axios.get(``)
     
     return request.then(response => response.data)
 }
