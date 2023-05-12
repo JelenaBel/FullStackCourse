@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+
 import CountryDetailed from './ContryDetailed'
 
 import Country from './Country'
@@ -13,7 +13,7 @@ const CountriesList = (props)=> {
     <ul>
     
     <ul key= {index} style = {{listStyleType: 'circle'}}>  
-    <CountryDetailed country= {country} weather = {props.weather}></CountryDetailed> 
+    <CountryDetailed country= {country} weather = {props.weather} handleBackAllCountries= {props.handleBackAllCountries}></CountryDetailed> 
     </ul>
     
     

@@ -33,6 +33,10 @@ useEffect(() => {
 }, [])
 
 
+const handleBackAllCountries = () =>{
+  setSearched('')
+  setShowAll(true)
+}
 
 const handleShowCountry = (nameCommon) =>{
   console.log('button was clicked')
@@ -73,8 +77,8 @@ const countriesToShow = showAll
 return(
   <div>
       <h1> Countries </h1>
-      <Searched searched= {searched} handleSearchedChange= {handleSearchedChange}/>
-      <CountriesList countries={countriesToShow} handleShowCountry={handleShowCountry} weather= {weather}/>
+      <Searched searched= {searched} handleSearchedChange= {handleSearchedChange} />
+      <CountriesList countries={countriesToShow} handleShowCountry={handleShowCountry} handleBackAllCountries= {handleBackAllCountries} weather= {weather}/>
       </div>
 
 )

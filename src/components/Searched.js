@@ -6,6 +6,7 @@ const Searched =(props)=>{
 <div>
     search:  
         <input value= {props.searched} onChange= {props.handleSearchedChange}></input>
+        
         </div>
         </form>
     )
