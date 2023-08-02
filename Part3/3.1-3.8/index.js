@@ -5,8 +5,7 @@ const app = express()
 app.use(express.json())
 
 app.use(morgan(function (tokens, req, res) {
-  
-  return [
+    return [
     tokens.method(req, res),
     tokens.url(req, res),
     tokens.status(req, res),
