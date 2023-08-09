@@ -1,0 +1,1 @@
+The link to the app on fly.io - https://blue-meadow-2356.fly.dev
